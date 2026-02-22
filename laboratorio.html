@@ -19,7 +19,7 @@
 
     <!-- CONTENEDOR DE LA SIMULACIÓN (Recibe los efectos de daño) -->
     <div id="simulation-container" class="relative w-full min-h-screen transition-all duration-500">
-    <!-- FONDO DE ECOSISTEMA MARINO DINÁMICO - ESTILO CARIBE�'O -->
+    <!-- FONDO DE ECOSISTEMA MARINO DINÁMICO - ESTILO CARIBE'O -->
     <div id="ocean-bg" class="fixed inset-0 z-[-1]">
         <canvas id="ocean-canvas" class="w-full h-full"></canvas>
         <div class="absolute inset-0 bg-gradient-to-t from-caribbean-blue via-tropical-teal to-ocean-green/30"></div>
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <!-- PARTÍCULAS DE CONTAMINACI�"N -->
+    <!-- PARTÍCULAS DE CONTAMINACI"N -->
     <div id="particles" class="fixed inset-0 z-[-1] pointer-events-none"></div>
 
     <!-- CAPA DE INMERSIÓN (Vignette y efectos) -->
@@ -108,10 +108,10 @@
     <div id="hud-container" class="relative z-10 w-full min-h-screen flex flex-col pointer-events-none">
         
         <!-- Header del Lab (Título) -->
-        <div class="pt-28 pb-4 text-center pointer-events-auto">
+        <div class="pt-40 pb-4 text-center pointer-events-auto">
             <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs shadow-black drop-shadow-md">Panel de Control Ambiental</span>
-            <h1 class="text-3xl md:text-5xl font-black tracking-tighter text-white drop-shadow-xl">¿QUÉ PASARÍA <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">SI...?</span></h1>
-            <p class="text-slate-200 mt-4 max-w-2xl mx-auto text-lg leading-relaxed drop-shadow-md">
+            <h1 class="text-4xl md:text-6xl lg:text-8xl leading-[1.15] px-4 pb-2 font-black tracking-tighter text-white drop-shadow-xl mt-5 mb-6">¿QUÉ PASARÍA <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300 inline-block pr-3">SI...?</span></h1>
+            <p class="text-slate-200 mt-3 max-w-2xl mx-auto text-xl leading-relaxed">
                 Experimenta en tiempo real cómo las acciones humanas transforman el océano. Activa amenazas o aplica soluciones y observa las consecuencias en el ecosistema.
             </p>
         </div>
@@ -390,12 +390,16 @@
 
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div id="drop-contamina" class="drop-zone min-h-[140px] md:min-h-[180px] bg-red-500/10 border-2 border-dashed border-red-400/50 rounded-3xl p-4 md:p-5">
-                            <h3 class="text-xl font-bold text-red-300 mb-2">🟥 Contamina el océano</h3>
+                            <h3 class="text-xl font-bold text-red-300 mb-2 flex items-center gap-2">
+                                <span class="material-symbols-outlined">dangerous</span> Contamina el océano
+                            </h3>
                             <p class="text-sm text-slate-200 mb-3">Arrastra aquí los elementos que dañan ecosistemas marinos.</p>
                             <div class="drop-items flex flex-wrap gap-3"></div>
                         </div>
                         <div id="drop-protege" class="drop-zone min-h-[140px] md:min-h-[180px] bg-green-500/10 border-2 border-dashed border-green-400/50 rounded-3xl p-4 md:p-5">
-                            <h3 class="text-xl font-bold text-green-300 mb-2">🟢 Protege el océano</h3>
+                            <h3 class="text-xl font-bold text-green-300 mb-2 flex items-center gap-2">
+                                <span class="material-symbols-outlined">health_and_safety</span> Protege el océano
+                            </h3>
                             <p class="text-sm text-slate-200 mb-3">Arrastra aquí los elementos que ayudan a cuidar el mar.</p>
                             <div class="drop-items flex flex-wrap gap-3"></div>
                         </div>
@@ -422,8 +426,7 @@
     <!-- Botón Flotante de Reinicio (Siempre visible para control total) -->
     <button id="floating-reset-btn" class="hidden fixed bottom-8 right-8 z-[9999] px-6 py-4 bg-primary text-deep-abyss font-bold rounded-full shadow-[0_0_30px_rgba(56,189,248,0.6)] hover:scale-110 transition-all flex items-center gap-3 border-4 border-white/20" onclick="resetEnvironment()">
         <span class="material-symbols-outlined text-3xl">restart_alt</span> <span class="hidden md:inline text-lg">Reiniciar Escenario</span>
-    </button>
-
+    </button>`r`n
     <!-- Scripts -->
     <script src="assets/js/interactive.js"></script>
     <script src="assets/js/laboratorio.js"></script>
